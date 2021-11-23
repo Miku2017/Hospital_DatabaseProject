@@ -1,7 +1,9 @@
 ﻿CREATE TABLE [dbo].[Patient] (
-    [PatientID] INT IDENTITY (1, 1) NOT NULL,
-    [FirstName]  Varchar(50) NOT NULL,
-    [LastName]  Varchar(50) NOT NULL,    
+    [PatientID] INT          IDENTITY (1, 1) NOT NULL,
+    [FirstName] VARCHAR (50) NOT NULL,
+    [LastName]  VARCHAR (50) NULL,
     CONSTRAINT [PK_Patient_PatientID] PRIMARY KEY CLUSTERED ([PatientID] ASC)
 );
+
+
 
