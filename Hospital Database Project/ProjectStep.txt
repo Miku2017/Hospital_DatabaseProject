@@ -1,3 +1,6 @@
 - Create Databse
 - Create Table
 - Add Constraints
+    + Primary Key 
+    + Foreign Key
+    + Not Null
