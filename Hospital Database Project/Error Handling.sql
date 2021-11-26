@@ -27,6 +27,12 @@ Commit Tran
 
 Begin catch
       --- Insert into Error log statement 
+      	Insert Into  dbo.ErrorLog 
+			([ErrorNumber],[ErrorLine],[Errorstate],[ErrorProcedure],
+			[ErrorSeverity],[ErrorMessage],[ErrorDatetime],[CreatedBy],[CreatedOn]) 
+	Select 
+		 Error_number(),ERROR_LINE(),ERROR_STATE(),ERROR_PROCEDURE(),
+		 ERROR_SEVERITY(),ERROR_MESSAGE(),GETDATE(),SUSER_SNAME(),GETDATE()
 
 	 IF (XACT_STATE())=-1
 	     Rollback Tran
